@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+  
+</head>
+
+<body>
+    
+    <div class="background">
+        <h1>Formulario de prueba</h1>
+
+        <section class="sect1"><br>
+            <label for="Nombre">Nombre: </label>
+            <input type="text" name="Nombre" id="Nombre" required placeholder="aquí va tu Nombre"><br><br>
+
+            <label for="Nombre">Apellido: </label>
+            <input type="text" name="apellido" id="apellido" required placeholder="aquí va tu Apellido"><br><br>
+
+            <label for="Teléfono">Teléfono: </label>
+            <input type="text" name="Nombre" id="Nombre" maxlength="9" required
+                placeholder="aquí va tu Teléfono"><br><br>
+        </section>
+
+        <section class="sect2">
+            <label for="E-Mail">E-Mail: </label>
+            <input type="text" name="E-Mail" id="E-Mail" required placeholder="aquí va tu E-Mail"><br><br>
+
+            <label for="Usuario">Usuario: </label>
+            <input type="text" name="Usuario" id="Usuario" required placeholder="aquí va tu Usuario"><br><br>
+
+            <label for="Password">Password: </label>
+            <input type="password" name="Password" id="Password" required placeholder="aquí va tu Password"><br><br>
+        </section>
+
+        <fieldset>
+            <legend>Destino</legend>
+            <select name="Ciudad" required>
+                <option value="">Elija una ciudad</option>
+                <option value="ciudad 1">Vilna</option>
+                <option value="ciudad 2">Kaunas</option>
+                <option value="ciudad 3">Trakai</option>
+            </select>
+
+            <br><br>
+            <label for="fpartida" required>Fecha de Partida:</label>
+            <input type="date" name="fpartida" id="fpartida" required min="2023-06-10"><br><br>
+
+            <label for="fregreso" required>Fecha de Regreso: </label>
+            <input type="date" name="fregreso" id="fregreso" required min="2023-06-10">
+
+            <br><br>
+            <input type="radio" name="viaje" checked required>
+            <label for="viaje">Sólo pasaje</label>
+
+            <br>
+            <input type="radio" name="viaje" required>
+            <label for="viaje">Sólo alojamiento</label>
+
+            <br>
+            <input type="radio" name="viaje" required>
+            <label for="viaje">Viaje y alojamiento</label>
+        </fieldset>
+
+        <section class="sect3">
+            <br>
+            <input type="checkbox" name="hab" checked required value="hotel" onclick="limitarSeleccion(this)">
+            <label for="hab">Hotel</label>
+
+            <br>
+            <input type="checkbox" name="hab" required value="hostel" onclick="limitarSeleccion(this)">
+            <label for="hab">Hostel</label>
+
+            <br>
+            <input type="checkbox" name="hab" required value="estancia" onclick="limitarSeleccion(this)">
+            <label for="hab">Estancia turística</label>
+
+            <br>
+            <input type="checkbox" name="hab" required value="habitacion" onclick="limitarSeleccion(this)">
+            <label for="hab">Habitación</label>
+        </section>
+
+        <br><br>
+        <label for="">Viajeros:</label><br>
+        <label for="mayores">Mayores:</label>
+        <input type="text" required placeholder="viajeros mayores" class="mayor" id="mayor"><br><br>
+
+        <label for="menores">Menores:</label>
+        <input type="text" required placeholder="viajeros menores" class="menor" id="menor"><br><br>
+
+        <label for="viajeros">Viajeros:</label>
+        <input type="text" required placeholder="viajeros totales" class="viajero" id="viajero"><br><br>
+
+        <br>
+        <input type="submit" class="enviar" value="Enviar datos">
+        <input type="reset" class="borrar" value="Borrar datos">
+        <input type="button" class="btncal" id="btncal" value="Calcular">
+
+        <script src="../js/script.js"></script>
+    </div>
+
+</body>
+
+</html>

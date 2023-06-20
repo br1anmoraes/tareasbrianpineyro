@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba</title>
+    <link rel="stylesheet" href="../style-form.css">
+</head>
+
+<body>
+    <h1>Formulario PHP</h1>
+    <form action="/php/formulario.php" method="post">
+        <label for="ci">CI: </label>
+        <input type="text" name="ci" id="ci" required pattern="[0-9]{1,9}" placeholder="aquí va tu CI">
+        <span id="contador">Máximo 9 números.</span><br><br>
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+            placeholder="aquí va tu Nombre">
+        <span id="contador">Cualquier nombre, con o sin tilde, con o sin espacios.</span><br><br>
+
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" id="apellido" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+            placeholder="aquí va tu Apellido">
+        <span id="contador">Cualquier apellido, con o sin tilde, con o sin espacios.</span><br><br>
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required placeholder="aquí va tu Email"><br><br>
+
+        <label for="pass">Password: </label>
+        <input type="password" name="pass" id="pass" required minlength="4" placeholder="aquí va tu Password">
+        <span id="contador">Mínimo 4 caracteres.</span><br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento: </label>
+        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required max="2023-06-03"
+            placeholder="aquí va tu Fecha de Nacimiento">
+        <span id="contador">Fecha máxima: 03 del 06 del 2023.</span><br><br>
+
+        <label for="sexo">Sexo: </label>
+        <input type="radio" name="sexo" id="sexo" required placeholder="aquí va tu Sexo" value="Masculino">Masculino
+        <input type="radio" name="sexo" id="sexo" required placeholder="aquí va tu Sexo" value="Femenino">Femenino<br>
+
+        <br>
+        <input type="submit" class="btns" value="Enviar datos">
+        <input type="reset" class="btnr" value="Borrar datos">
+    </form>
+
+</body>
+
+</html>
